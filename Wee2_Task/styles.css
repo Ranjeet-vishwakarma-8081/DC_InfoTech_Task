@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #4A90E2;
+    color: white;
+}
+
+.logo img {
+    width: 22px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Change to a brighter color */
+}
+
+/* main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in;
+} */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: calc(100vh - 135px); 
+    animation: fadeIn 0.5s ease-in;
+    
+}
+
+
+.intro {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile img {
+    width: 250px;
+    border-radius: 10px; /* Rounded corners */
+    margin-left: auto;
+    animation: slideInRight 0.5s ease-in;
+}
+
+.details {
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4A90E2;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.about, .experience, .projects, .skills, .contact {
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #4A90E2; /* Highlight color */
+}
+
+.contact button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #0056b3; /* Darker shade */
+}
+
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    color: #4A90E2;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #FFD700; /* Change to a brighter color */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile img {
+        width: 150px; /* Adjust size for mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
